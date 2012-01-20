@@ -73,7 +73,7 @@ sub callback {
     my $token_secret = $session->{request_token_secret};
 
     return $error->("request_token and request_token_secret is required")
-        if !$token and !$token_secret;
+        unless $token and $token_secret;
 
     my $access_token = $self->consumer->get_access_token(
         token => OAuth::Lite::Token->new( token => $token, secret => $token_secret ),
