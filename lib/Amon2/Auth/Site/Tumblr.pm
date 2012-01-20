@@ -1,6 +1,5 @@
 package Amon2::Auth::Site::Tumblr;
 use 5.008_001;
-package Amon2::Auth::Site::Tumblr;
 
 use Mouse;
 use Amon2::Auth;
